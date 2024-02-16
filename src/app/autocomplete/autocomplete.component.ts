@@ -22,7 +22,7 @@ export class AutocompleteComponent {
   }
 
   getSuggestions(hint: string): Observable<string[]> {
-    // use an injected FilteringService and use tis filterByLength(words, length) method.
+    // use the injected service
     return this.autocompleteService.autocomplete(hint);
   }
 }
