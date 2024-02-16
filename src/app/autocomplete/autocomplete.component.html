@@ -1,5 +1,10 @@
 <h1>Autocomplete</h1>
 
+<p>
+  Create a form that takes one word as input; then prints the autocomplete
+  suggestions below the input
+</p>
+
 <ul>
   <li *ngFor="let suggestion of words$ | async">
     {{ suggestion }}
