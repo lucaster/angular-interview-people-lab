@@ -24,7 +24,7 @@ export class FilteringComponent {
   ];
 
   get filtered() {
-    // use an injected FilteringService and use tis filterByLength(words, length) method.
+    // TODO use the injected service
     return ['implement me'];
   }
 }

@@ -22,7 +22,7 @@ export class AutocompleteComponent {
   }
 
   getSuggestions(hint: string): Observable<string[]> {
-    // use the injected service
+    // TODO use the injected service
     return this.autocompleteService.autocomplete(hint);
   }
 }

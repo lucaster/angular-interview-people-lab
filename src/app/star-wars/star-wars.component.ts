@@ -9,5 +9,5 @@ import { StarWarsService } from './star-wars.service';
 })
 export class StarWarsComponent {
   constructor(private readonly starWarsService: StarWarsService) {}
-  // TODO
+  // TODO use the injected service to retrieve and display the Star Wars films
 }
