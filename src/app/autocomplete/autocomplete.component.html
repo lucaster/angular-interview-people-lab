@@ -1,8 +1,7 @@
 <h1>Autocomplete</h1>
 
-<ul *ngIf="getSuggestions('hi') | async as suggestions">
-  <li>a</li>
-  <li *ngFor="let suggestion of suggestions">
+<ul>
+  <li *ngFor="let suggestion of words$ | async">
     {{ suggestion }}
   </li>
 </ul>

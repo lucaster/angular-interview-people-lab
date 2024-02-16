@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AutocompleteService } from './autocomplete.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { AsyncPipe, CommonModule } from '@angular/common';
 
 @Component({
+  //changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'autocomplete',
   templateUrl: './autocomplete.component.html',
   styleUrls: ['./autocomplete.component.css'],
@@ -13,6 +14,12 @@ import { AsyncPipe, CommonModule } from '@angular/common';
 })
 export class AutocompleteComponent {
   constructor(private readonly autocompleteService: AutocompleteService) {}
+
+  words$: Observable<string[]> = this.getSuggestions('a');
+
+  get getWords$(): Observable<string[]> {
+    return this.getSuggestions('a');
+  }
 
   getSuggestions(hint: string): Observable<string[]> {
     // use an injected FilteringService and use tis filterByLength(words, length) method.

@@ -13,7 +13,7 @@ export class AutocompleteService {
       results.push(searchText + '_' + i);
     }
     console.log(searchText, results);
-    const delayMs = 500 + 2000 * Math.random();
+    const delayMs = 500 + 200 * Math.random();
     return of(results).pipe(delay(delayMs));
   }
 }
